@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version:   Build Version: 1.5.7914.27669
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="cafe_robot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.25085263189235 0.124999962303015 0.0935320082362602"
+        rpy="0 0 0" />
+      <mass
+        value="10.8578811053591" />
+      <inertia
+        ixx="0.0426858240432794"
+        ixy="1.7569086594278E-07"
+        ixz="0.000155619703380273"
+        iyy="0.230347212991678"
+        iyz="-3.18405125974503E-08"
+        izz="0.264862085249415" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="fwr">
+    <inertial>
+      <origin
+        xyz="-0.020730182706802 -3.05311331771918E-16 -5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.411963029786123" />
+      <inertia
+        ixx="0.000782944022280859"
+        ixy="1.63673263883773E-19"
+        ixz="1.01835643551111E-19"
+        iyy="0.00044224300953557"
+        iyz="-5.42101086242752E-20"
+        izz="0.00044224300953557" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/fwr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/fwr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fwrj"
+    type="continuous">
+    <origin
+      xyz="-0.15674 0 0.06"
+      rpy="-2.7485 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fwr" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="bwr">
+    <inertial>
+      <origin
+        xyz="-0.0207301827068022 -1.11022302462516E-16 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.411963029786123" />
+      <inertia
+        ixx="0.000782944022280859"
+        ixy="2.7490034794638E-19"
+        ixz="8.41716902329948E-20"
+        iyy="0.00044224300953557"
+        iyz="1.35525271560688E-20"
+        izz="0.00044224300953557" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/bwr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/bwr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bwrj"
+    type="continuous">
+    <origin
+      xyz="-0.34326 0 0.06"
+      rpy="-2.7485 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="bwr" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="fwl">
+    <inertial>
+      <origin
+        xyz="0.0192698172931982 2.2639694285953E-10 -1.76622078074118E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.411963029786123" />
+      <inertia
+        ixx="0.000782944022280858"
+        ixy="4.00282008960999E-12"
+        ixz="-3.12277793936144E-12"
+        iyy="0.00044224300953557"
+        iyz="-3.01022136718782E-20"
+        izz="0.00044224300953557" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/fwl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/fwl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fwlj"
+    type="continuous">
+    <origin
+      xyz="-0.15674 0.21 0.06"
+      rpy="-0.90828 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="fwl" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="bwl">
+    <inertial>
+      <origin
+        xyz="0.0192698172931983 2.3715227004395E-10 -1.61894164740772E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.411963029786123" />
+      <inertia
+        ixx="0.000782944022280858"
+        ixy="4.19298552777216E-12"
+        ixz="-2.86237435985586E-12"
+        iyy="0.00044224300953557"
+        iyz="2.74670831122755E-20"
+        izz="0.00044224300953557" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/bwl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/bwl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bwlj"
+    type="continuous">
+    <origin
+      xyz="-0.34326 0.21 0.06"
+      rpy="-0.9718 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="bwl" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="100"
+      velocity="100" />
+  </joint>
+  <link
+    name="laser_sen">
+    <inertial>
+      <origin
+        xyz="0.001 -0.001 -0.001"
+        rpy="0 0 0" />
+      <mass
+        value="8.00000000000002E-06" />
+      <inertia
+        ixx="5.33333333333336E-12"
+        ixy="2.23558666723887E-28"
+        ixz="2.60949186066306E-29"
+        iyy="5.33333333333336E-12"
+        iyz="1.10442030512094E-28"
+        izz="5.33333333333336E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/laser_sen.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/laser_sen.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_senj"
+    type="fixed">
+    <origin
+      xyz="-0.042 0.128 0.162"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser_sen" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="cam_sen">
+    <inertial>
+      <origin
+        xyz="0.001 -0.001 -0.001"
+        rpy="0 0 0" />
+      <mass
+        value="8.00000000000003E-06" />
+      <inertia
+        ixx="5.33333333333336E-12"
+        ixy="9.68348751433871E-29"
+        ixz="-2.39795703092794E-28"
+        iyy="5.33333333333336E-12"
+        iyz="-6.99450407893483E-28"
+        izz="5.33333333333336E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/cam_sen.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/cam_sen.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cam_senj"
+    type="fixed">
+    <origin
+      xyz="-0.04 0.124 0.16"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="cam_sen" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="emp_sen">
+    <inertial>
+      <origin
+        xyz="0.001 -0.001 -0.001"
+        rpy="0 0 0" />
+      <mass
+        value="8.00000000000003E-06" />
+      <inertia
+        ixx="5.33333333333336E-12"
+        ixy="9.6834875143387E-29"
+        ixz="-2.39795703092794E-28"
+        iyy="5.33333333333336E-12"
+        iyz="-6.99450407893483E-28"
+        izz="5.33333333333336E-12" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/emp_sen.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/emp_sen.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="emp_senj"
+    type="fixed">
+    <origin
+      xyz="-0.04 0.122 0.16"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="emp_sen" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="top">
+    <inertial>
+      <origin
+        xyz="0 0.0125651013239149 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.260678745840163" />
+      <inertia
+        ixx="0.000367429779280589"
+        ixy="3.4564176069204E-20"
+        ixz="-2.03287907341032E-20"
+        iyy="0.000668095783252645"
+        iyz="6.24363974199095E-21"
+        izz="0.000388638806672402" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/top.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cafe_robot/meshes/top.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="topj"
+    type="fixed">
+    <origin
+      xyz="-0.15674 0.125 0.158"
+      rpy="1.5708 0 0.20185" />
+    <parent
+      link="base_link" />
+    <child
+      link="top" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+  </joint>
+
+
+
+
+
+
+     
+ <gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>fwlj</leftFrontJoint>
+    <rightFrontJoint>fwrj</rightFrontJoint>
+    <leftRearJoint>bwlj</leftRearJoint>
+    <rightRearJoint>bwrj</rightRearJoint>
+    <wheelSeparation>0.21</wheelSeparation>
+    <wheelDiameter>0.12</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>true</broadcastTF>
+  </plugin>
+</gazebo>
+
+
+
+
+
+
+
+
+
+
+
+</robot>
